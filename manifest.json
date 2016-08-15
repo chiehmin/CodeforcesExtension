@@ -3,12 +3,15 @@
 
   "name": "Codeforce submission status link",
   "description": "Add submission status link to the problem page",
-  "version": "1.0",
+  "version": "1.0.1",
   "permissions": [
     "tabs",
     "activeTab",
     "http://codeforces.com/*"
   ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["http://codeforces.com/problemset/problem/*"],
