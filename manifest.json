@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Codeforce submission status link",
+  "description": "Add submission status link to the problem page",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://codeforces.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://codeforces.com/problemset/problem/*"],
+      "js": ["jquery-3.1.0.min.js", "myscript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
