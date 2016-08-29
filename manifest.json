@@ -3,15 +3,20 @@
 
   "name": "Codeforce submission status link",
   "description": "Add submission status link to the problem page",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "browser_action": {
     "default_icon": "icon.png"
   },
   "content_scripts": [
     {
       "matches": ["http://codeforces.com/problemset/problem/*"],
-      "js": ["jquery-3.1.0.min.js", "myscript.js"],
-      "run_at": "document_end"
+      "js": ["jquery-3.1.0.min.js", "problemset.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://codeforces.com/group/*/contest/*/problem/*"],
+      "js": ["jquery-3.1.0.min.js", "group_problem.js"],
+      "run_at": "document_idle"
     }
   ]
 }
