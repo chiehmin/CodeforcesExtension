@@ -4,6 +4,9 @@
   "name": "Codeforce submission status link",
   "description": "Add submission status link to the problem page",
   "version": "1.0.2",
+  "icons": { 
+    "128": "icon.png" 
+  },
   "browser_action": {
     "default_icon": "icon.png"
   },
